@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Search</title>
+    <link rel="stylesheet" href="mainstyles.css"/>
+    <script src="lib/jquery.min.js"></script>
+    <script src="backend.js"></script> 
+</head>
+<body>
+    <h1>Navayuga Infrastructure Toll Plaza</h1>
+    <div class="search-container">
+        <p><input type="text" id="searchByNumber" placeholder="Enter Vehicle Number">
+            <button>Search by Vehicle Number</button></p>
+        <p>Enter Vehicle Type 
+            <select id="searchByType">
+                <option value="" disabled selected>Select Vehicle Type</option>
+                <option value="Bike">Bike</option>
+                <option value="LMV">LMV</option>
+                <option value="HMV">HMV</option>
+                <option value="Heavy Truck">Heavy Truck</option>
+            </select>
+            <button>Search by Vehicle Type</button>
+        </p>
+        <button>Statistics</button>
+    </div>
+    <div class="input-container">
+        <input type="text" id="vehicleNumber" placeholder="Enter Vehicle Number">
+        <select id="vehicleType">
+            <option value="" disabled selected>Select Vehicle Type</option>
+            <option value="Bike">Bike</option>
+            <option value="LMV">LMV</option>
+            <option value="HMV">HMV</option>
+            <option value="Heavy Truck">Heavy Truck</option>
+        </select>
+        <input type="text" id="amount" placeholder="Amount" readonly>
+        <button type="button" id="submit">Submit</button>
+    </div>
+    <script>
+        document.getElementById("vehicleType").addEventListener("change", function() {
+            var vehicleType = this.value;
+            var amount = 0;
+            if (vehicleType === "Bike") {
+                amount = 100;
+            } else if (vehicleType === "LMV") {
+                amount = 200;
+            } else if (vehicleType === "HMV") {
+                amount = 300;
+            }else if (vehicleType === "Heavy Truck") {
+                amount = 500;
+            }
+            document.getElementById("amount").value = amount;
+        });
+       
+    </script>
+</body>
+</html>
+
+
+ 
+
