@@ -1,22 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    background-color:black;
+    color:white;
 }
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+
+h1,h2{
+    text-align: center;
 }
-.search-container button {
-    margin-left: 10px;
+
+nav{
+    text-align: center;
+    background-color:#00cc99;
+    padding-left:450px;
+    padding-top:20px;
+    color: black;
+    height:65px;
 }
-.input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+
+.menu{
+    display:flex;
+    list-style-type: none;
 }
-.input-container input,
-.input-container select {
-    margin-bottom: 10px;
-    padding: 5px 10px;
+
+nav li a{
+    padding-right:50px;
+}
+
+div{
+    display: inline-block;
+    width: 30%;
+    border: 2px dotted white;
+    vertical-align: top;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+}
+
+#titles{
+    font-size: larger;
+    font-weight:bold;
+    color: #00cc99;
+    margin: 5px 0px 10px 0px;
+}
+
+table{
+    border-color:white;
+}
+
+table th{
+    color: #00cc99;
+}
+
+#submit,#search{
+    background-color:#00cc99;
+    border-radius:8px;
+    height:30px;
 }
